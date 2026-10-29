@@ -163,8 +163,8 @@ Cva::Config.merger_class = CvaTailwindMerger
 
 ## Documentation
 
-Start with [Component](https://rubydoc.info/gems/cva-ruby/Cva/Component), then move
-to [ModelHelper](https://rubydoc.info/gems/cva-ruby/Cva/ModelHelper).
+Start with [Component](https://nashbridges.github.io/cva-ruby/Cva/Component), then move
+to [ModelHelper](https://nashbridges.github.io/cva-ruby/Cva/ModelHelper).
 
 ## Similar works
 

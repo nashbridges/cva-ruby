@@ -1,0 +1,29 @@
+name: Yard
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  id-token: write
+  pages: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '4.0.9'
+          bundler-cache: true
+      - name: Build YARD doc
+        run: bundle exec rake doc:build
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: doc/
+      - uses: actions/deploy-pages@v4

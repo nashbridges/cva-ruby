@@ -14,6 +14,11 @@ task "test:watch" do
   sh "bin/retest --notify"
 end
 
+desc "Build YARD documentation"
+task "doc:build" do
+  sh "bin/yard doc"
+end
+
 desc "Start YARD server at localhost:8808"
 task "doc:server" do
   sh "bin/yard server --reload"
